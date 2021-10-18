@@ -1,0 +1,321 @@
+.paddingTB20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.paddingTB40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.paddingTB80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.paddingLR0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+// THEME 1
+
+// Backgrounds
+@Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+@Very-dark-desaturated-blue-toggle-background: hsl(223, 31%, 20%);
+@Very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+
+// Keys
+@Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+@Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+
+@Red-key-background-toggle: hsl(6, 63%, 50%);
+@Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+@light-grayish-orange-key-background: hsl(30, 25%, 89%);
+@grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+// Text
+@Very-dark-grayish-blue: hsl(221, 14%, 31%);
+@White: hsl(0, 0, 100%);
+
+// THEME 2
+
+// Backgrounds
+@Light-gray-main-background: hsl(0, 0%, 90%);
+@Grayish-red-toggle-background: hsl(0, 5%, 81%);
+@Very-light-gray-screen-background: hsl(0, 0%, 93%);
+
+// Keys
+@Dark-moderate-cyan-key-background: hsl(185, 42%, 37%);
+@Very-dark-cyan-key-shadow-: hsl(185, 58%, 25%);
+
+@Orange-key-background-toggle: hsl(25, 98%, 40%);
+@Dark-orange-key-shadow: hsl(25, 99%, 27%);
+
+@light-grayish-yellow-key-background: hsl(45, 7%, 89%);
+@dark-grayish-orange-key-shadow: hsl(35, 11%, 61%);
+
+// Text
+
+@Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+@White: hsl(0, 0, 100%);
+
+// THEME 3
+
+// Backgrounds
+@Very-dark-violet-main-background: hsl(268, 75%, 9%);
+@Very-dark-violet-toggle-background: hsl(268, 71%, 12%);
+
+// Keys
+@Dark-violet-key-background: hsl(281, 89%, 26%);
+@vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+
+@pure-cyan-key-background-toggle: hsl(176, 100%, 44%);
+@soft-cyan-key-shadow: hsl(177, 92%, 70%);
+
+@very-dark-violet-key-background: hsl(268, 47%, 21%);
+@dark-magenta-key-shadow: hsl(290, 70%, 36%);
+
+/// Text
+@Light-yellow: hsl(52, 100%, 62%);
+@Very-dark-blue: hsl(198, 20%, 13%);
+@White-text: hsl(0, 0, 100%);
+
+.container {
+  max-width: 540px;
+  width: 100%;
+}
+
+.group-flex {
+  display: flex;
+}
+
+body {
+  font-size: 32px;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+
+  // Theme1Class
+  &.theme1 {
+    background-color: @Very-dark-desaturated-blue-main-background;
+    color: @Very-dark-grayish-blue;
+
+    #header {
+      color: @White;
+
+      #switch {
+        background-color: @Very-dark-desaturated-blue-screen-background;
+        &:before {
+          background-color: @Red-key-background-toggle;
+          left: 5px;
+        }
+      }
+    }
+    #display {
+      background-color: @Very-dark-desaturated-blue-screen-background;
+      color: @White;
+    }
+    #controls {
+      background-color: @Very-dark-desaturated-blue-toggle-background;
+      .item {
+        background-color: @light-grayish-orange-key-background;
+        border-bottom: 4px solid @grayish-orange-key-shadow;
+
+        &.special {
+          background-color: @Desaturated-dark-blue-key-background;
+          border-bottom: 4px solid @Desaturated-dark-blue-key-shadow;
+        }
+
+        &.equal {
+          background-color: @Red-key-background-toggle;
+          border-bottom: 4px solid @Dark-red-key-shadow;
+        }
+
+        &.special,
+        &.equal {
+          color: @White;
+        }
+      }
+    }
+  }
+  // Theme2Class
+  &.theme2 {
+    background-color: @Light-gray-main-background;
+    color: @Very-dark-grayish-yellow;
+
+    #header {
+      color: @Very-dark-grayish-yellow;
+
+      #switch {
+        background-color: @Grayish-red-toggle-background;
+        &:before {
+          background-color: @Orange-key-background-toggle;
+          margin: auto;
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+    #display {
+      background-color: @Very-light-gray-screen-background;
+      color: @Very-dark-grayish-yellow;
+    }
+    #controls {
+      background-color: @Grayish-red-toggle-background;
+      .item {
+        background-color: @light-grayish-yellow-key-background;
+        border-bottom: 4px solid @dark-grayish-orange-key-shadow;
+
+        &.special {
+          background-color: @Dark-moderate-cyan-key-background;
+          border-bottom: 4px solid @Very-dark-cyan-key-shadow-;
+        }
+
+        &.equal {
+          background-color: @Orange-key-background-toggle;
+          border-bottom: 4px solid @Dark-orange-key-shadow;
+        }
+
+        &.special,
+        &.equal {
+          color: @White;
+        }
+      }
+    }
+  }
+  // Theme3Class
+  &.theme3 {
+    background-color: @Very-dark-violet-main-background;
+    color: @Light-yellow;
+
+    #switch {
+      background-color: @Very-dark-violet-toggle-background;
+      &:before {
+        background-color: @pure-cyan-key-background-toggle;
+        right: 5px;
+      }
+    }
+    #display {
+      background-color: @Very-dark-violet-toggle-background;
+      color: @Light-yellow;
+    }
+    #controls {
+      background-color: @Very-dark-violet-toggle-background;
+      .item {
+        background-color: @very-dark-violet-key-background;
+        border-bottom: 4px solid @dark-magenta-key-shadow;
+        color: @White-text;
+
+        &.special {
+          background-color: @Dark-violet-key-background;
+          border-bottom: 4px solid @vivid-magenta-key-shadow;
+          color: @White-text;
+        }
+
+        &.equal {
+          background-color: @pure-cyan-key-background-toggle;
+          border-bottom: 4px solid @soft-cyan-key-shadow;
+          color: @Very-dark-blue;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 40px;
+
+  .group-flex {
+    justify-content: space-between;
+    margin-bottom: 5px;
+    align-items: flex-end;
+    span {
+      font-size: 0.3em;
+      text-transform: uppercase;
+    }
+    #theme-switch {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+      .group-flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      #switch {
+        position: relative;
+        display: flex;
+        width: 70px;
+        padding: 0px 5px;
+        height: 25px;
+        border-radius: 50px;
+        align-items: center;
+        margin-bottom: -3px;
+        cursor: pointer;
+        &:before {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+#display {
+  padding: 35px 30px 40px 30px;
+  border-radius: 8px;
+  text-align: right;
+  display: block;
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
+
+#controls {
+  display: grid;
+  gap: 30px;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  border-radius: 8px;
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    padding-top: 7px;
+
+    &.special,
+    .equal {
+      font-size: 0.55em;
+    }
+
+    &.double {
+      grid-column: span 2;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="dist/css/frameworks.css" />
+    <link rel="stylesheet" href="css/app.bundle.css" />
+  </head>
+  <body class="theme1">
+    <div class="container-fluid paddingLR0">
+      <div class="container paddingTB80">
+        <div id="header">
+          <h1>calc</h1>
+          <div class="group-flex">
+            <span>Theme</span>
+            <div id="theme-switch">
+              <div class="group-flex">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+              </div>
+              <div class="1" id="switch"></div>
+            </div>
+          </div>
+        </div>
+        <div id="display">0</div>
+        <div id="controls">
+          <div class="item number">7</div>
+          <div class="item number">8</div>
+          <div class="item number">9</div>
+          <div class="item special delete">Del</div>
+
+          <div class="item number">4</div>
+          <div class="item number">5</div>
+          <div class="item number">6</div>
+          <div class="item operation">+</div>
+
+          <div class="item number">1</div>
+          <div class="item number">2</div>
+          <div class="item number">3</div>
+          <div class="item operation">-</div>
+
+          <div class="item point">.</div>
+          <div class="item number">0</div>
+          <div class="item operation">/</div>
+          <div class="item operation">×</div>
+
+          <div id="reset" class="item double special">Reset</div>
+          <div class="item double equal">=</div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor
+      </a>
+      . Coded by
+      <a href="https://confessionsofacodingfreak.tumblr.com/">
+        Jason12119 aka Pedro aka Confessions of a Coding Freak
+      </a>
+      .
+    </div>
+    <script src="dist/js/frameworks-min.js"></script>
+    <script src="dist/js/app.bundle-min.js"></script>
+  </body>
+</html>
